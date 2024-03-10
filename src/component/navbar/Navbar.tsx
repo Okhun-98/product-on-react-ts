@@ -109,6 +109,11 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
               </Button>
             ))}
           </Box>
+          {token && (
+            <Button color="inherit" onClick={logOut}>
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
       <nav>
@@ -133,7 +138,6 @@ export const Navbar: React.FC<INavbarProps> = (props) => {
       </nav>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
-        <Typography paragraph>Add your main content here.</Typography>
       </Box>
     </Box>
   );
